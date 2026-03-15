@@ -1,9 +1,5 @@
-FROM n8nio/n8n:2.8.3
+FROM n8n/n8n-runners:latest
 
+# Install exceljs globally so the task runner can find it
 USER root
-
-RUN mkdir -p /home/node/.n8n \
- && cd /home/node/.n8n \
- && npm install exceljs
-
-USER node
+RUN npm install -g exceljs
