@@ -22,4 +22,4 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/n8n-excel:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/n8n-render:latest
