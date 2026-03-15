@@ -28,12 +28,3 @@ jobs:
           file: Dockerfile                  # your existing Dockerfile for n8n
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/n8n-render:latest
-
-      # ── Required: Build custom runners image ──
-      - name: Build and push custom runners image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          file: Dockerfile.runners          # ← the new file above
-          push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/n8n-runners-exceljs:latest
