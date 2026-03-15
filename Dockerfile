@@ -2,9 +2,8 @@ FROM n8nio/n8n:2.8.3
 
 USER root
 
-WORKDIR /data
-RUN npm install exceljs
+RUN npm install -g exceljs
 
-ENV NODE_PATH=/data/node_modules
+ENV NODE_PATH=/usr/local/lib/node_modules
 
 USER node
